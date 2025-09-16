@@ -24,6 +24,11 @@
                 "glob": "**/*",
                 "input": "public",
                 "output": "/"
+              }, 
+              {
+              "glob": "**/*.m4v",
+              "input": "src/assets/videos",
+              "output": "/assets/videos"
               }
             ],
             "styles": ["src/styles.css"],
