@@ -1,0 +1,43 @@
+.project-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      gap: 15px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  color: inherit;
+}
+
+.video-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.project-video {
+  width: 50%;
+  height: auto;
+  max-height: 240px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .project-video {
+    max-height: 120px;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,132 @@
+/* --------------------------- */
+/* Reset & Base Styles         */
+/* --------------------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* --------------------------- */
+/* Page Wrapper / Root         */
+/* --------------------------- */
+app-root {
+  display: flex;               /* Flex to allow children to stretch */
+  flex-direction: column;
+  min-height: 100vh;           /* Always fill viewport height */
+  width: 100%;
+  background: linear-gradient(-45deg, #8e44ad, #3498db, #9b59b6, #2980b9);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* --------------------------- */
+/* Gradient Animation          */
+/* --------------------------- */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --------------------------- */
+/* Grid Container & Sections   */
+/* --------------------------- */
+.grid-container {
+  flex: 1;                     /* Fill remaining space in app-root */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  padding: 100px 20px 20px 20px; /* space for navbar */
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.grid-container > * {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(229, 0, 250);
+  text-align: center;
+
+  /* Font styling */
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.5;
+  letter-spacing: 1px;
+
+  /* Hover animation */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-container > *:hover {
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* --------------------------- */
+/* Projects Tile               */
+/* --------------------------- */
+.projects-tile {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(229, 0, 250);
+  text-align: center;
+  cursor: pointer;
+
+  /* Font styling */
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.5;
+  letter-spacing: 1px;
+
+  /* Hover animation */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-tile:hover {
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* --------------------------- */
+/* Responsive for Mobile       */
+/* --------------------------- */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding-top: 80px;
+    padding-bottom: 50px; /* optional spacing */
+    height: auto;          /* let it grow naturally */
+  }
+
+  .grid-container > *:hover {
+    transform: scale(1);  /* disable zoom on mobile */
+    box-shadow: none;     /* remove shadow on mobile */
+  }
+
+  /* Hide bouncing/floating images */
+  .bouncing-image,
+  .floating-image {
+    display: none;
+  }
+}
