@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,10 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {}
+export class AppComponent {
+  constructor(private titleService: Title) {}
+
+  ngOnInit() {
+    this.titleService.setTitle('Chris Giere');
+  }
+}
