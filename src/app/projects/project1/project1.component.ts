@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
           playsinline
           class="project-video"
         >
-          <source src="task_demo.mp4" type="video/mp4">
+          <source src="taskdemo.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
     </div>
