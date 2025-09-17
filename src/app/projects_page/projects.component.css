@@ -70,16 +70,24 @@ html, body {
 /* --------------------------- */
 /* Responsive for Mobile       */
 /* --------------------------- */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .grid-container {
-    padding: 40px 10px 30px 10px;
-    gap: 15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding-top: 80px;
+    padding-bottom: 50px; /* optional spacing */
+    height: auto;          /* let it grow naturally */
   }
 
-  .grid-container > * {
-    font-size: 1rem;
-    min-height: 150px;
-    padding: 15px;
+  .grid-container > *:hover {
+    transform: scale(1);  /* disable zoom on mobile */
+    box-shadow: none;     /* remove shadow on mobile */
+  }
+
+  /* Hide bouncing/floating images */
+  .bouncing-image,
+  .floating-image {
+    display: none;
   }
 }
 
