@@ -70,21 +70,16 @@ html, body {
 /* --------------------------- */
 /* Responsive for Mobile       */
 /* --------------------------- */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .grid-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    padding: 80px 20px 50px 20px;
+    padding: 40px 10px 30px 10px;
+    gap: 15px;
   }
 
-  .grid-container > *:hover {
-    transform: scale(1);
-    box-shadow: none;
-  }
-
-  .bouncing-image,
-  .floating-image {
-    display: none;
+  .grid-container > * {
+    font-size: 1rem;
+    min-height: 150px;
+    padding: 15px;
   }
 }
 
