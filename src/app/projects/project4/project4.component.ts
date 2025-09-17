@@ -5,10 +5,9 @@ import { Component } from '@angular/core';
   standalone: true,
   template: `
     <div class="project-content">
-      <h2>In Progress: Learning OpenGL with C++</h2>
-      <div class="video-container">
+      <h2>In Progress: Learning OpenGL with C++ - 2D Game</h2>
         <div class="images-container">
-        <img src="opengl.gif" alt="Project Screenshot 1" class="project-image">
+        <img src="farmerted.gif" alt="Project Screenshot 1" class="project-image">
         </div>
     </div>
   `,

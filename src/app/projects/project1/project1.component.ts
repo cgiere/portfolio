@@ -6,17 +6,9 @@ import { Component } from '@angular/core';
   template: `
     <div class="project-content">
       <h2>Java Task Manager Desktop Application</h2>
-      <div class="video-container">
-        <video 
-          autoplay 
-          loop 
-          muted 
-          playsinline
-          class="project-video"
-        >
-          <source src="task_demo.m4v" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <div class="images-container">
+        <img src="taskdemo.gif" alt="client chat demo" class="project-image">
+      </div>
     </div>
   `,
   styleUrls: ['./project1.component.css']
